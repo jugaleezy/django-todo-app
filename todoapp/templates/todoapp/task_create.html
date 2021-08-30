@@ -1,0 +1,12 @@
+{% extends "todoapp/main.html" %}
+{% block title%}ToDo-Create Task{% endblock %}
+{% block content %}
+    <h1>Task Form </h1>
+
+    <Form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <a href="{% url 'tasks' %}"><input type="button" value="back"></a>
+        <input type="submit" value="Add"/>
+    </form>
+{% endblock content %}

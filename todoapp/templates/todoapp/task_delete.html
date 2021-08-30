@@ -1,0 +1,10 @@
+{% extends "todoapp/main.html" %}
+{% block title%}ToDo-Delete Task{% endblock %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <p><b>{{task.title}}</b> task will be deleted.</p>
+        <a href="{% url 'tasks' %}"><input type="button" value="back"></a>
+        <input type="submit" value="Delete"/>
+    </form>
+{% endblock content %}

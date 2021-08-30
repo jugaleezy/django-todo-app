@@ -1,0 +1,9 @@
+{% comment %} {% extends "todoapp/main.html" %}
+{% block title%}ToDo Tasks{% endblock %}
+{% block content %}
+    <h1> Task: {{task}}</h1>
+    {{task.id}}
+    {{task.title}}
+    {{task.description}}
+    {{task.status}}
+{% endblock content %} {% endcomment %}

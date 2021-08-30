@@ -1,0 +1,12 @@
+{% extends "todoapp/main.html" %}
+{% block title%}ToDo SignIn{% endblock %}
+{% block content %}
+    <h1>ToDo App SignIn</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="SignIn"/>
+    </form>
+
+    <p>Not a member! <a href="{% url 'signup' %}">Sign Up</a> and join us.</p>
+{% endblock content %}
